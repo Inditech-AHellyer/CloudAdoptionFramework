@@ -58,6 +58,7 @@ jobs:
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
           restore-keys: |
             ${{ runner.os }}-nuget-
+      - run: ls -l
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
